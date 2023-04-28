@@ -43,6 +43,7 @@ openjfx 11.0.2
 3) Set VM options to --module-path ${PATH_TO_FX} --add-modules javafx.fxml,javafx.graphics,javafx.controls
 4) Set Main method
 5) Run in IntelliJ
+6) Username and password for the application is test and test
 
 ## Extra Report
 I added an extra report that shows the total number of appointments, customers, and contacts.
