@@ -33,9 +33,16 @@ Java SE 11.0.11
 openjfx 11.0.2
 
 ## How to run the program
-1) Set VM options to --module-path ${PATH_TO_FX} --add-modules javafx.fxml,javafx.graphics,javafx.controls
-2) Set Main method
-3) Run in IntelliJ
+1) Setup project with libraries
+    1) JavaFX
+    2) MySQL Connector
+2) Setup MySQL
+    1) Create user "sqlUser" with password "Passw0rd!"
+    2) Import all files in ./DatabaseSchema
+    3) Set privileges to user for schema "client_schedule" (all Object Rights and DDL Rights)
+3) Set VM options to --module-path ${PATH_TO_FX} --add-modules javafx.fxml,javafx.graphics,javafx.controls
+4) Set Main method
+5) Run in IntelliJ
 
 ## Extra Report
 I added an extra report that shows the total number of appointments, customers, and contacts.
