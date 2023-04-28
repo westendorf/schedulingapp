@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.westendorf.controller.AppointmentsEditController">
+    <TextField fx:id="titleTextField" layoutX="88.0" layoutY="37.0" prefHeight="25.0" prefWidth="174.0" promptText="Title" />
+    <TextField fx:id="descriptionTextField" layoutX="88.0" layoutY="72.0" prefHeight="25.0" prefWidth="174.0" promptText="Description" />
+    <TextField fx:id="locationTextField" layoutX="87.0" layoutY="106.0" prefHeight="25.0" prefWidth="174.0" promptText="Location" />
+    <DatePicker fx:id="startDatePicker" layoutX="87.0" layoutY="175.0" promptText="Start Date" />
+    <TextField fx:id="startHourTextField" layoutX="278.0" layoutY="175.0" prefHeight="25.0" prefWidth="35.0" promptText="Hour" />
+    <Label layoutX="316.0" layoutY="172.0" text=":">
+        <font>
+            <Font size="22.0" />
+        </font>
+    </Label>
+    <TextField fx:id="startMinTextField" layoutX="323.0" layoutY="175.0" prefHeight="25.0" prefWidth="35.0" promptText="Min" />
+    <ComboBox fx:id="startMeridiemCombo" layoutX="367.0" layoutY="175.0" prefWidth="83.0" promptText="AM/PM" />
+    <DatePicker fx:id="endDatePicker" layoutX="87.0" layoutY="211.0" promptText="End Date" />
+    <TextField fx:id="endHourTextField" layoutX="278.0" layoutY="213.0" prefHeight="25.0" prefWidth="35.0" promptText="Hour" />
+    <Label layoutX="316.0" layoutY="208.0" text=":">
+        <font>
+            <Font size="22.0" />
+        </font>
+    </Label>
+    <TextField fx:id="endMinTextField" layoutX="323.0" layoutY="213.0" prefHeight="25.0" prefWidth="35.0" promptText="Min" />
+    <ComboBox fx:id="endMeridiemCombo" layoutX="367.0" layoutY="213.0" prefHeight="25.0" prefWidth="83.0" promptText="AM/PM" />
+    <ComboBox fx:id="contactCombo" layoutX="87.0" layoutY="248.0" prefHeight="25.0" prefWidth="174.0" promptText="Contact" />
+    <ComboBox fx:id="customerCombo" layoutX="87.0" layoutY="284.0" prefHeight="25.0" prefWidth="174.0" promptText="Customer" />
+    <Button fx:id="addUpdateButton" layoutX="6.0" layoutY="361.0" mnemonicParsing="false" onAction="#onClickSaveButton" text="Add/Update" />
+    <Label fx:id="fieldsRequiredLabel" layoutX="88.0" layoutY="329.0" text="All fields are required" textFill="#fc0101" visible="false" />
+    <TextField fx:id="typeTextField" layoutX="88.0" layoutY="139.0" prefHeight="25.0" prefWidth="174.0" promptText="Type" />
+   <TextField fx:id="idTextField" editable="false" layoutX="88.0" layoutY="2.0" prefHeight="25.0" prefWidth="174.0" promptText="ID" />
+</AnchorPane>

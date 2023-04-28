@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<?import io.github.westendorf.view.TopMenu?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/11"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="io.github.westendorf.controller.TotalsReportController">
+   <top>
+      <TopMenu fx:id="topMenu" />
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="totalCustomers" layoutX="170.0" layoutY="116.0" />
+            <Label fx:id="totalAppointments" layoutX="170.0" layoutY="176.0" />
+            <Label fx:id="totalContacts" layoutX="170.0" layoutY="239.0" />
+            <Label layoutX="224.0" layoutY="239.0" text="Total Contacts" />
+            <Label layoutX="224.0" layoutY="176.0" text="Total Appointments" />
+            <Label layoutX="224.0" layoutY="116.0" text="Total Customers" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

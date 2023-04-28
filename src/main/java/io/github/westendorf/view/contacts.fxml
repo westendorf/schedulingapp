@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.westendorf.view.TopMenu?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/11"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="io.github.westendorf.controller.ContactsController">
+    <top>
+        <TopMenu fx:id="topMenu" />
+    </top>
+   <center>
+       <AnchorPane>
+           <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+             <TableView layoutX="148.0" layoutY="113.0" prefHeight="175.0" prefWidth="304.0" fx:id="contactsTable">
+                 <columns>
+                     <TableColumn prefWidth="75.0" fx:id="tcEdit" />
+                     <TableColumn prefWidth="75.0" text="Name" fx:id="tcName" />
+                     <TableColumn prefWidth="75.0" text="Email" fx:id="tcEmail" />
+                     <TableColumn prefWidth="75.0" fx:id="tcDelete" />
+                 </columns>
+             </TableView>
+             <Button layoutX="148.0" layoutY="302.0" mnemonicParsing="false" text="Add" onAction="#addContact" />
+       </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import io.github.westendorf.view.TopMenu?>
+<?import javafx.geometry.Insets?>
+<BorderPane fx:id="pane"
+            xmlns="http://javafx.com/javafx/11"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="io.github.westendorf.controller.AppointmentsController">
+    <top>
+        <TopMenu fx:id="topMenu" />
+    </top>
+    <center>
+        <VBox>
+            <padding>
+                <Insets top="50" right="50" bottom="50" left="50"/>
+            </padding>
+            <AnchorPane fx:id="filterContainer" prefWidth="200.0" GridPane.rowIndex="2">
+                <DatePicker fx:id="datePicker" layoutX="7.0" layoutY="88.0" onAction="#filter"/>
+                <RadioButton fx:id="inMonthRadioBtn" layoutX="247.0" layoutY="71.0" mnemonicParsing="false"
+                             text="In Month" onAction="#filter"/>
+                <RadioButton fx:id="inWeekRadioBtn" layoutX="247.0" layoutY="92.0" mnemonicParsing="false"
+                             text="In Week" onAction="#filter"/>
+                <RadioButton fx:id="allRadioBtn" layoutX="247.0" layoutY="113.0" mnemonicParsing="false" text="All"
+                             onAction="#filter"/>
+                <Label layoutX="428.0" layoutY="40.0" text="Customer"/>
+                <ComboBox fx:id="customersComboBox" layoutX="428.0" layoutY="59.0" prefWidth="150.0"
+                          onAction="#filter"/>
+                <Label layoutX="428.0" layoutY="113.0" text="Contact"/>
+                <ComboBox fx:id="contactsComboBox" layoutX="428.0" layoutY="130.0" prefWidth="150.0"
+                          onAction="#filter"/>
+            </AnchorPane>
+            <TableView fx:id="appointmentsTable" prefHeight="400.0" prefWidth="667.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="4" GridPane.rowSpan="1">
+                <columns>
+                    <TableColumn fx:id="tcEdit" prefWidth="75.0" />
+                    <TableColumn fx:id="tcId" prefWidth="75.0" text="ID" />
+                    <TableColumn fx:id="tcTitle" prefWidth="75.0" text="Title" />
+                    <TableColumn fx:id="tcDescription" prefWidth="75.0" text="Description" />
+                    <TableColumn fx:id="tcLocation" prefWidth="75.0" text="Location" />
+                    <TableColumn fx:id="tcType" prefWidth="75.0" text="Type" />
+                    <TableColumn fx:id="tcUserId" prefWidth="75.0" text="User ID" />
+                    <TableColumn fx:id="tcCustomerId" prefWidth="75.0" text="Customer ID" />
+                    <TableColumn fx:id="tcCustomerName" prefWidth="75.0" text="Customer" />
+                    <TableColumn fx:id="tcContactName" prefWidth="75.0" text="Contact" />
+                    <TableColumn fx:id="tcStartDate" prefWidth="75.0" text="Start Date" />
+                    <TableColumn fx:id="tcStartTime" prefWidth="75.0" text="Start Time" />
+                    <TableColumn fx:id="tcEndDate" prefWidth="75.0" text="End Date" />
+                    <TableColumn fx:id="tcEndTime" prefWidth="75.0" text="End Time" />
+                    <TableColumn fx:id="tcDelete" prefWidth="75.0" />
+                </columns>
+            </TableView>
+            <Button mnemonicParsing="false" onAction="#addAppointment" text="Add" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        </VBox>
+   </center>
+</BorderPane>

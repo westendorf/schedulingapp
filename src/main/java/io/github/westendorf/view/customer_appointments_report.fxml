@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import io.github.westendorf.view.TopMenu?>
+<BorderPane
+        xmlns="http://javafx.com/javafx/11"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="io.github.westendorf.controller.CustomerAppointmentsReportController">
+    <top>
+        <TopMenu fx:id="topMenu" />
+    </top>
+    <center>
+        <AnchorPane prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <TableView fx:id="byTypeTable" layoutX="79.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="tcTypeCustomer" prefWidth="75.0" text="Customer" />
+                        <TableColumn fx:id="tcType" prefWidth="75.0" text="Type" />
+                        <TableColumn fx:id="tcTypeCount" prefWidth="75.0" text="Count" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="byMonthTable" layoutX="362.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="tcMonthCustomer" prefWidth="75.0" text="Customer" />
+                        <TableColumn fx:id="tcMonth" prefWidth="75.0" text="Month" />
+                        <TableColumn fx:id="tcMonthCount" prefWidth="75.0" text="Count" />
+                    </columns>
+                </TableView>
+                <Label layoutX="22.0" layoutY="61.0" text="Total Number of Customer Appointments By Type" />
+                <Label layoutX="300.0" layoutY="61.0" text="Total Number of Customer Appointments By Month" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
+
